@@ -1,5 +1,5 @@
 /*Navigation bar*/
-nav {
+#nav-bar {
   position: fixed;
   height: 80px;
   width: 100%;
