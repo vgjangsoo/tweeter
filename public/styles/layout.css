@@ -34,8 +34,9 @@ body {
   background-color: white;
  }
 
+
 /*Old tweet container CSS*/
-.container .old-tweet {
+.old-tweet {
   margin: 15px;
   border-radius: 8px;
   border-style: solid;
@@ -48,6 +49,7 @@ body {
   padding-bottom: 1em;
   background-color: #eee;
   overflow: hidden;
+  opacity: 0.6;
 }
 
 header {
@@ -103,5 +105,26 @@ footer {
   font-size: 80%;
 }
 
+section i {
+  padding-left: 10px;
+}
+
+/*icons from awesomefonts always hidden unless mouse hovers*/
+.icons {
+  color: #00a087;
+  float: right;
+  opacity: 0;
+}
+
+/*hovering*/
+.old-tweet:hover {
+  border: 1px solid;
+  opacity: 1;
+}
+
+/*make icons appear when mouse is hovering old-tweet container.*/
+.old-tweet:hover .icons {
+  opacity: 1;
+}
 
 
