@@ -33,3 +33,75 @@ body {
   padding-bottom: 100%;
   background-color: white;
  }
+
+/*Old tweet container CSS*/
+.container .old-tweet {
+  margin: 15px;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: #c2c2c2;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding-bottom: 1em;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+}
+
+/*User Image CSS*/
+img.userImg {
+  border: 1px solid;
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  margin: 15px;
+  margin-left: -5px;
+}
+
+/*userName CSS*/
+span.userName {
+  margin: 15px;
+  flex-grow: 1;
+  font-size: 180%;
+  margin-left: 5px;
+}
+
+/*userID CSS*/
+span.userID {
+  margin: 15px;
+  color: #aaa9a9;
+}
+
+article.articles {
+  background-color: white;
+  margin-left: -20px;
+  padding-left: 20px;
+  margin-right: -19.9px;
+  padding-right: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+footer {
+  border-top: solid;
+  border-width: 0.8px;
+  border-color: #c2c2c2;
+  background-color: white;
+  margin-left: -20px;
+  padding-left: 20px;
+  margin-right: -19.9px;
+  padding-right: 20px;
+  margin-bottom: -15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 80%;
+}
+
+
+
