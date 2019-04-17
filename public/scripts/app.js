@@ -103,7 +103,7 @@ function renderTweets(tweets) {
   }
 };
 
-
+//make the document ready.
 $(document).ready(function() {
   renderTweets(data)
 });
