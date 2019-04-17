@@ -36,7 +36,7 @@ body {
 
 
 /*Old tweet container CSS*/
-.old-tweet {
+.tweet {
   margin: 15px;
   border-radius: 8px;
   border-style: solid;
@@ -117,13 +117,13 @@ section i {
 }
 
 /*hovering*/
-.old-tweet:hover {
+.tweet:hover {
   border: 1px solid;
   opacity: 1;
 }
 
 /*make icons appear when mouse is hovering old-tweet container.*/
-.old-tweet:hover .icons {
+.tweet:hover .icons {
   opacity: 1;
 }
 
