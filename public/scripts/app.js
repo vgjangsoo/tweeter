@@ -95,6 +95,7 @@ $(document).ready(function() {
 
       // AJAX POST request.
       $.post("/tweets", $text, function(){
+        //if error msg is shown hide it.
         $(".error-alert").hide();
         loadTweets();
 
