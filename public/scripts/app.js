@@ -38,10 +38,10 @@ function createTweetElement (tweetData) {
 
   // data from tweetData
   img.attr("src", tweetData.user.avatars.small);
-  userName.html(tweetData.user.name);
-  userID.html(tweetData.user.handle);
-  articles.html(tweetData.content.text);
-  days.html(tweetData.created_at);
+  userName.text(tweetData.user.name);
+  userID.text(tweetData.user.handle);
+  articles.text(tweetData.content.text);
+  days.text(tweetData.created_at);
 
   $("#tweets-container").append(newTweet);
 
@@ -63,6 +63,7 @@ function loadTweets() {
     //make sure tweet database doesn't show again and again. make container empty().
     $("#tweets-container").empty();
     renderTweets(data);
+    $("[name=text]").val("");
   })
 };
 
@@ -74,7 +75,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     let $text = $(this).serialize();
-    let inputLength = $('[name=text]').val().length;
+    let inputLength = $("[name=text]").val().length;
     // Add validation.
     if (inputLength === 0 || inputLength > 140) {
       alert("Cannot post! because you did not submit anything or your tweet is too long");
