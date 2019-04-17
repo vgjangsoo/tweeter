@@ -70,16 +70,27 @@ function loadTweets() {
 //make the document ready.
 $(document).ready(function() {
 
+  // nav-bar: compose button to hide and show/focus compose section.
+  $(".nav-button").on("click", function() {
+    $(".new-tweet").fadeToggle();
+    $("#textfocus").focus();
+  });
+
+  // function loadTweets which loads old tweets
   loadTweets();
+
+  // the user submits tweet
   $(".submit-tweet").on("submit", function() {
     event.preventDefault();
 
     let $text = $(this).serialize();
     let inputLength = $("[name=text]").val().length;
+
     // Add validation.
     if (inputLength === 0 || inputLength > 140) {
       alert("Cannot post! because you did not submit anything or your tweet is too long");
     } else {
+
       // AJAX POST request.
       $.post("/tweets", $text, function(){
         loadTweets();

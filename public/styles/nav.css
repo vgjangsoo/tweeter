@@ -24,3 +24,20 @@
   font-size: 200%;
   line-height: 2.5em;
 }
+
+/*nav bar compose button*/
+#nav-bar .nav-button {
+  float: right;
+  margin: 15px;
+  padding: 15px;
+  color: #00a087;
+  border: 2px, solid;
+  border-radius: 8px;
+  opacity: 0.8;
+}
+
+/*when mouse hover it is going to show to button clear.*/
+#nav-bar .nav-button:hover {
+  color: black;
+  opacity: 1;
+}
