@@ -53,13 +53,15 @@ function renderTweets(tweets) {
   for (let i = 0; i < tweets.length; i++) {
     var $tweet = createTweetElement(tweets[i]);
     // append tweet
-    $("#tweets-container").append($tweet);
+    $("#tweets-container").prepend($tweet);
   }
 };
 
 //fetching tweets with AJAX
 function loadTweets() {
   $.getJSON("/tweets", function(data) {
+    //make sure tweet database doesn't show again and again. make container empty().
+    $("#tweets-container").empty();
     renderTweets(data);
   })
 };
@@ -78,7 +80,10 @@ $(document).ready(function() {
       alert("Cannot post! because you did not submit anything or your tweet is too long");
     } else {
       // AJAX POST request.
-      $.post("/tweets", $text);
+      $.post("/tweets", $text, function(){
+        loadTweets();
+
+      });
     }
   })
 });
