@@ -49,6 +49,10 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form class="submit-tweet" method="POST" action="/tweets" Content-Type: application/x-www-form-urlencoded>
+          <div class="error-alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            Cannot post! Please tweet more than one letter and less than 140 letters.
+          </div>
           <textarea id="textfocus" name="text" placeholder="What are you humming about?"></textarea>
           <input id="input" type="submit" value="Tweet">
           <span class="counter">140</span>
@@ -59,6 +63,7 @@
       <section id="tweets-container">
 
       </section>
+
     </main>
   </body>
 </html>

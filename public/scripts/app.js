@@ -88,11 +88,14 @@ $(document).ready(function() {
 
     // Add validation.
     if (inputLength === 0 || inputLength > 140) {
-      alert("Cannot post! because you did not submit anything or your tweet is too long");
+      // error-alert to show!
+      $(".error-alert").show();
+
     } else {
 
       // AJAX POST request.
       $.post("/tweets", $text, function(){
+        $(".error-alert").hide();
         loadTweets();
 
       });
