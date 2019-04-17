@@ -63,7 +63,10 @@ function loadTweets() {
     //make sure tweet database doesn't show again and again. make container empty().
     $("#tweets-container").empty();
     renderTweets(data);
+    // empty textarea after the tweet is rendered.
     $("[name=text]").val("");
+    // reset the counter to 140.
+    $(".counter").text(140);
   })
 };
 
