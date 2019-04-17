@@ -70,9 +70,15 @@ $(document).ready(function() {
   loadTweets();
   $(".submit-tweet").on("submit", function() {
     event.preventDefault();
-    let text = $(this).serialize();
-    // AJAX POST request.
-    $.post("/tweets", text);
-  })
 
+    let $text = $(this).serialize();
+    let inputLength = $('[name=text]').val().length;
+    // Add validation.
+    if (inputLength === 0 || inputLength > 140) {
+      alert("Cannot post! because you did not submit anything or your tweet is too long");
+    } else {
+      // AJAX POST request.
+      $.post("/tweets", $text);
+    }
+  })
 });
