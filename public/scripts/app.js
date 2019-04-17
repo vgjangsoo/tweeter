@@ -99,11 +99,17 @@ function renderTweets(tweets) {
   for (let i = 0; i < data.length; i++) {
     var $tweet = createTweetElement(data[i]);
     // append tweet
-    $('#tweets-container').append($tweet);
+    $("#tweets-container").append($tweet);
   }
 };
 
 //make the document ready.
 $(document).ready(function() {
+
+  $(".submit-tweet").on("submit", function() {
+    event.preventDefault();
+    let text = $(this).serialize();
+    $.post("/tweets", text);
+  })
   renderTweets(data)
 });

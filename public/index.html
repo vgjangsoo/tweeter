@@ -33,6 +33,7 @@
 
   </head>
 
+
   <body>
 
     <!-- Top nav bar (fixed) -->
@@ -45,15 +46,14 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets" Content-Type: application/x-www-form-urlencoded>
+        <form class="submit-tweet" method="POST" action="/tweets" Content-Type: application/x-www-form-urlencoded>
           <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
+          <input id="input" type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
       <!-- tweet container -->
       <section id="tweets-container">
-
 
       </section>
     </main>
