@@ -24,17 +24,10 @@ function createTweetElement (tweetData) {
   let heart = $("<i>").addClass("fas fa-heart");
 
   // append the same way in html
-  div.append(flag);
-  div.append(retweet);
-  div.append(heart);
-  footer.append(days);
-  footer.append(div);
-  header.append(img);
-  header.append(userName);
-  header.append(userID);
-  newTweet.append(header);
-  newTweet.append(articles);
-  newTweet.append(footer);
+  div.append(flag).append(retweet).append(heart);
+  footer.append(days).append(div);
+  header.append(img).append(userName).append(userID);
+  newTweet.append(header).append(articles).append(footer);
 
   // data from tweetData
   img.attr("src", tweetData.user.avatars.small);
