@@ -7,17 +7,17 @@ This repository is the starter code for the project: Students will fork and clon
 ## Screent Shots
 
 ### Main Page
-!["Sreenshot of main page"]()
+!["Sreenshot of main page"](https://github.com/vgjangsoo/tweeter/blob/master/docs/main_page.png)
 
 ---------------------------------
 
 ### Edit Page
-!["Sreenshot of compose box"]()
+!["Sreenshot of compose box"](https://github.com/vgjangsoo/tweeter/blob/master/docs/compose_box.png)
 
 ----------------------------------
 
 ### myURL page
-!["Sreenshot of error message"]()
+!["Sreenshot of error message"](https://github.com/vgjangsoo/tweeter/blob/master/docs/error-msg.png)
 
 ---------------------------------
 
