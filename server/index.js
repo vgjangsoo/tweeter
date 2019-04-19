@@ -7,7 +7,7 @@ const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
 const {MongoClient} = require("mongodb");
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI = process.env.MONGODB_URI || PORT;
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
