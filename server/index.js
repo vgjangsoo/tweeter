@@ -1,4 +1,4 @@
-require('dotenv').config();
+
 "use strict";
 
 // Basic express setup:
@@ -9,6 +9,7 @@ const bodyParser    = require("body-parser");
 const app           = express();
 const {MongoClient} = require("mongodb");
 const MONGODB_URI = process.env.MONGODB_URI;
+require('dotenv').config();
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
